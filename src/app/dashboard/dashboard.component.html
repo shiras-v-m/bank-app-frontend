@@ -1,0 +1,150 @@
+<!-- navigation bar begins -->
+<nav class="navbar bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <h4 class="title">Welcome to our Bank</h4>
+          </a>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="material-symbols-outlined">
+                    settings
+                </span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a (click)="logout()"  class="dropdown-item cursor-pointer" style="cursor: pointer;">Logout</a></li>
+              <li><a data-bs-toggle="modal" data-bs-target="#staticBackdropdelete" class="dropdown-item" href="#">Delete Accout</a></li>
+            </ul>
+          </div>
+    
+    </div>
+  </nav>
+  <!-- navigation bar ends -->
+
+  <!-- body -->
+  <marquee class="" style="margin-top:80px; padding:10px 100% ;"  direction="left">Visit your nearest branch for offers!!</marquee>
+  <div class="row " style="width:100%">
+    <div class="col-lg-4">
+        <h1 class="title">Welcome to our {{user}}</h1>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, vel numquam rem dignissimos quod adipisci totam reiciendis est eaque libero amet quia enim nulla esse modi natus repudiandae fugiat vero.</h6>
+    </div>
+    <div class="col-lg-8">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQMAAADDCAMAAACxkIT5AAAB7FBMVEX////29vYRJkVmJYNbx4v/Qmj1p4MvrWb7+/v4+Pj8/PxcAHzp4u1qKYdyNo1lI4Px7fL/O2P++fz1o310Qo5vzJj2/v1lKYMfql/Q5tr8epHtQGr/kab/jaNWxIY0pGi0nMGBUJllG4QtiFQ7tG//MVwifEkAADLzP2MFJ0H6sr8pIlLlO16n3L7YOFgAGz4AEzrm6OsAAC31tpr27usAIUP1xbD25N223sdJvHv2zryNlKD1rYwAEDgAACf+r4PC5dD/9cH1vKP11ceWc6jFyc+FWpvb0eDKuNNUXnHf4ONkUlmOZ6I1QFgADz4+O06VUoNmb3/Yl3tTR1ORbGX5v8q9qMhhLU65coP+Z4P9X27J4ahywYCaNlmusrv/sb7/3OPPwNfwlWuni7VKIW01IVvqr6CCQoO5vcV8gpGSmKMoMEkqJlUAADxBJWaggrDGfoS7h3PXjISrfW6MSYTPlnt7XmVDTmQVG1JmR0qtmJfiuqxhPlL8f3jhZ28kJ0iBMFTCO1/4jnw9KUr7aXKiX4Oc0JO42qDPh4PTI0r4zNSquIjFsYT/uMXfzrd/sHeA0aSXYZFQr4Giuog4kms0fGQtY10jTVRgO4BcSH5GnHdVWnpLdHQidldazosdX1JGAG1hpIx4lmoAAAtL18OlAAAY/0lEQVR4nO2di3/bRJ7AJTuxNVIa2VZw0tKaRDi4BYqdxE7qNKlL3knT0KS0NG1Jm4Zuk6Y0fdCy7B0HB3RZunDLAbuwsJTb23/0ZkavkTSjkRwnaXv+fT5ASGyN9NXvNb95CUJTmtKUpjSlKU1pSlOa0pSmNKUpTdkbkWVZsgT+vNe3s8siSwAA0SsAQBZ7fWu7IhLl6V0knnMOMuf5n3sMcqjnt0Ta69vdAZGiADC04flShmgq4FB4fpShTgJYng8K2yHwnFDYJoHngEJ0T/i8UZAbQwAJ2OtnqVMapATPMoUGeAIPhWctYWigHTyrFBprB4Q8O+6x4XZAyDOiDDuJAGN4+rVhpxE8Axh2AwHG8PTWGXYLwVPMYcciAofEU4RiR/KC8CxQXRYVqfeUyF4ioAjAXFDBeveo7KoziCy74j32whlElp0FsafOIJLsXHrxdFuCR3YGwzNhCaTsQE1irx+pDml0B+yZUwMsjdWFvX6aeqWBfmGvHWL97TfOIBr4OHXJ+DYoNEgVdsYboCw3cMYCSv3wB8auDZeH6qbQGAj1th4gQJZSq+fXJuanepgyNT+xdn41JQNN04bHtmEPDUDQ+BQRCG3dHYqi6Lqqqu9dV9XO10iBvzBE1+GHOrp/p2kJrX5FaASEhntEYXpK0dW4Ier1T9T4e0dIiXXGCVEVJQFlYBu3sX0I1MtKdesHAFuKjp4NvWSoCmwxNAV+8kYNQijXz2DbPsHvEWXYO5tcnF2R6nk1IDWFCOhKx0T36nRbKkDapmfW5tshMP1Mgm0MAE0E5LW6zRDpaxqszC4ulorFwkZfX7iZWK5v90AEuj4xnWK0JxtFI7M+Al3nlKIqFxKJsSz1ctLc+sr6ZB9nLsT2rMGn8cJ6f7FYjEEpliqLUSO3sIUQ9Ewz2/O9Ulmage5xKaFRjQFsjBagbN7k3Mi2rMF7T8Lc6QoCAF0XlP7j0byCNK1ABBNs1bSaAwJM8YAgSVAP5VSncqGWGKAogrBRqJzahDdSmOW8jO0w8FxaWOyvIAC3bt++HjsSq8xGYwB61Lg+BS+balfV80KPqq/RW2vTp7t7wL6Z1fYU/Fab2k71CGCy/1Si9vb78JYKG8F5zDYUwfOIYKUf6cB1FUV2/faRWOl4FGuQVqEaqMgTpCbm51eFrfn5GTrw1HzbzJY0Pz09ARmI8oxyp5YY8bUkzJ5FcXPpFIRQmgtuu34GHlOQb45CBrfV9259Equ81nkdNn06FYHBhB5XupmNkc8oQ5cowlQZBx9Z7oHxURv3QAB9J+4iBom7C/BGbu6UIvhMAXrDW+ot5Azeqhx5D1niZHhFgBYQV9pCtkW0KgjnlXv+HEFa6V9aWoIIlu5XKsXTwQzqDw3u+4L2By3hNrSBWOnsyIPN67fgD+EZII+oTkVFgG++Tf8AKsKg+zPyxvuJB5DBg6Xa/QenFjhZQr05gscdyEgNjrwHnzyGlfDW9UgM5G6FbQqBCITMlLLkc4vS7AK8CS0B/5Ko3e/v25nw6EErGQw+iZVOIVdUewgZFBdDdyxlmBwoq/SWeHe+pZyBGbPbLYIPFxAY7BISZ/vndiZP8lxVMmzhtcrDxH3IIHHn9yhJCM1Agmky3R0wI6z98roVrAjDZJIAGdxNGBCWThV5DOqNDN6rCrMwCv3+zggMygnt7tKdEtSDD8MXGGB2oNBUkonAseFVRUWK4LIGebb0EP4KMdisxLgM6nQIPpSLkEHxLlY/+K/70DQqvKYdSXXADClMM5S7hu4Uh4ZE2WlOPl6qLGFDOAVvpMDxB3U6BN/7kTfgm6+8ZTQMlaEYG10JrwYoNO6rD4HQBkPKB7jV4bLVU5PWC5XNB/BtXHsLvpoFXvP1OQRftAFzJZgkVSp3sQrWzlZgehY+PWjrjKvtoRG4a8KQQbxzUMP6NzZeRn1LmCMVYsWPrl27piEGXL9UHwP/40l9K5VKrHK2hnPU/sLCzQgdBjoDVl3A/SnEYF9qwAgCkP/Y8JCYFSGDt9GvIIPK7G4xwB3H/v6PrsGWB+YmJ8UoFVcqg3AITAaiCQFz0Ab+MAoZoNcR4+fKYp2BgX530uTKv0EbXMqKEUsoNAYhEVgMwLANAcrDYqz40GRQfDjGq7vWg4Ch5kBIjcCGaf35yAzCIrAYiGBoxKEA+4sVlK0lNpGj1rShXWMgrukdF5YSI1ERUBiERmAzgF31YSs1RAwMPXirsokzqGBFqIcBvRMir3U+uqHoNy4MRa0s+xgwejk052UzgH8uD5oUYGwuPkBB+lQJJ4yDjWdAvSJoO1Or1S7oqtI5HRGClwHT1oIZiGLWpPB2sYKLKIkY9oy7xkA+j7tpZ/S4qpyPNg7nYRAFgZsBpCCOD8D8xHQHDwwSviJLAxjQLzRhZImdahx2hCNpgpsB46uMjNbDAKLKnkt/Eqv8+8dQ/mPE8A+ccZjGMZjHDGp30FCJcj4KBDcD+jtjJfU+BiI40PpJLPZpa2tr2vSRv2t8bKQ/njB/ByeJiUd4vGiaWb0BWa+4GERDQGGQOtz6zpHKf0IEn5lZ07ldY7B1w2CQgD2guH6GFY/A0EGf7CMYZDLmRhkZJBJA/w6YNkJh0Nr6buzzw63pj81IeZFT3a0nV2aERqO8CeWegsaFtQFqdR1cbe1Ne+TFuM1g/zGKnDyJ/vHKfgYDcbn1U8TgCxPBZ8ucpK0eBvQXDKYVUxFqF9Cg0T0tQctRs4fSrV4hGHRFkP10BrCFd2KxwxetpDF9hcOgnvoBQ8lT7foFEwIKkPfo+Vn2QLqVrQeZriSUap6QpCl57y+ZDM71vhOrvG7ljBd7H+9ADYV1qXldsYooN/RO7I0Gyt72EYNDLH8AMINqiyM5m0EyR/y6JYABdAjvxkqmP0x80drbFoygrloa61LdChr+M6TD+mnco4iYgUcsBpKIGLgQ4Bf+xz8a6kH8oRrAQFx+ceG+hSDd2stB0LiwYIyUoFkRWJYemUFCG3O7RsSA5Q9ExCDnQ3D50puXk14IOTaD7MH0KVsLoPD6sXUwYAb+1D7oCh9ZmmBVNbQRl2tEDA641eCAyQBgBqTG57EWvAnF0ATX39gMrqSN/HAEakFreifCAjv5mUeJgaUAY0M2hUHCK0AGaY8/MBmg67oZYDXIv/nmpUsUawhg8Pgz2xBCMGhgWEAOAWeIZ2qmEWSH7DLfYDkLbAYMWxB9DKrouS+/+eWXl7q6DL8YigEYIxDwGdTjEpkM8CwCCOGG5Qmy2aExzRhz0EaGyyAblkHVeONGCISWcMlEgP+Yz+cCGYAxjUAArx7MoK6KKvNqJgP4PEs1AwIATl0DYhgcErNhGOTMSGjExfwlSKFqx0f4y3wQAwvBRauddDCDekyB3SFEMykMCOqfanZMAOXxAc3WhrGhQAaSzaBqM0h2fQkhkAySbAagbNifdtG+eu/VQAb1mALTJeJ5VSYEMzwYORIQy+NjI8b4n5a46EPgYwBtId/i6EHXl5cum9HRyJrYtgCGDK1beuOwffXDrwYpQl2mwE48p3RnJq1+Y8lQyXFcZweIw+DAiMZh4PeJUAku2wzywT4RiGaF/W6x8vk7n74L5dNP3/k8FpQrN9QdyDNKnBCle1wz0wPzNQAYGspDw18E2QJw5wfouXF6YNqCPzbKBINs2Syvv70QI6V/PWAmSj2mwJ4R0KOSDPR5QTS8EzQIRxlBlNhoKMJl5BMvd3nUwGAAgMMgayiBNna65EIQKy4GFLXqUQPm1JhpnUQQVzsEUTITBG1syKbAZeB+UKO/8GWXr9dURbky9LgWg6wxxgLVbrIQ8wobQWNN4bziZtCJWgCQAr61sTKRI71uCyLw+utvkLZAgVCt+hDkUZ8J+VuDgekJNOh+hI2SF0HAFLmGRgVhza0HcRV3WSEFnCBoUBfQdGvM4A1bEAP4HxcDB0IuZ+aK2B/mWhCEnGMk+0WbAVYCDU1BEMGHFS+D0RWmMTRSDURhwsNAWTV4ASNBQBTGx4fCMAgpFgNdbx/EBIxuyZzPEmKlDRaDhvaXRGHKwwA5RaslWxmgskIGh23B8fsw4Q9eyHuEjaCKL9125k/38LVNawOToz4GxUXWfdfDgIlAFNxhASkCWb/JimbXYfDjIJ8ooqpyJkO0KMuyrxafzRpksSfEg2mQgOl1hZs+dxCrzLLuuo5EOSDZ8DNQp1zIYI8J+62Pg3IkQ7iOyr7m8ACqFNQGneiLZw175UPWXUd3iUFjR34G/hE3mMxf04zaThADnoISVzVygjNEn0nwu8RY7HRfwxgE5ZwUBnFlxksNDGufcfUgwptA9lX7QCf7jZt+BLHNhjEIHEKkMVBV34gbEANzJCQcGyWvOHQNutkPdLLvPOeoweYOMAgs09MYwGQxRautBzLgWAKJQBYGtYF23dV3nnRc4myRyyCqTwweSaYyiOtTXkXgMgiNAMMqe+sH63ZoPE0kjI1iwJnHMEVjEFcmPPGUxyD4roh7MPXFw0BesRhUPlwZ5TKImB9wJhT4ciQ7OLgh8BiERWCx8jBw0oPi4kqByyCiQ+CN4c/TGcQVt1+kMXBy5eB7oiDwMdiwnEDx+LrNgOkPIhpDMAJ/f8H2i+0p7xiLR8h+Y0gEDiovAztFGl0JwyCSMfDm1jD1IK5PBDM4TPSZIiPwMZi1YuPopMOAmSNFUwTe7Fuhg+oTsTXMENbgZ0D0G6lvJXP18eOrMgOBj4GdJlbmJsMwiKIIHARiioVA1y+0EfefPdjrtQSHgb9Z+cpyL5L0gat2l8A3d59kcNpkUDktogVGZogIuPHwisBbRS+5K6qON9Av1GquKZJl46Fs+eqrrywGfof4Tdoilu5dTmX9CHwMrOSwMiuHYxC+jMI1BXp6oH+w5F1sBMRzr7rl3Kt4XhpFLQ+ROpNufZxlzt2378NS/+KiMFeweQTdfmhF4CDAJS2aEpjj8O6ld65SgCRJxtw8vxoc8phNGkLwfsbLwHIHpQ2HAbuGYnwnnPCiguytJhpacMeaiBE8WdZg4FODb7wI0q3+DSJYDEZvCn0hGYR0izxTSAUi8K7BpDPwSsYdQHofP25NHwrNoLAup2wGzHqi+aVGMECLdf0IHtkIoCJkAoTO4IpLDXqvCPJya69PEbz9BStFKkxKojXcxK6pGhJKETimAGhqoPaMa87KkpGWF9jyLY1BZtllBwcwlPQVnh7YqfIcAFbXYZS3K0cYBryV41sUBnqbJA46K60ut7DlOxqDq71oDolpD+kXZeEx+nk5LAOYHkuOb+AwCBMaOAvHp2kItmAsAeMWBO3PURmc60X6/40BIX1VyBg0eAys54YpgWzlCgFjLIaEMYZgBilKt1ntwPcFhiwIX+c8wmMAowJygefShjMQjBw77Q2gjPwApQSylTMWggaeja/xJRjitN8hqtbcfem/TAhfe0eQSAZxOgP87NAEkDMwAyWXQdEJh7LVd0D+MVj4ZQSeNXUraCsYIlFUlVXzO8BkoP3FO4DkIMi9RNODx+ih0+egY0i3XsXeIYQtgEzJCYd2H7Iwx031uQy4FNu6p9r3WRuZwf+2W6u6QNmyhQB3kKcyKGPd7/0GQoAgLOcY7BMz+79dsNNEp5ZQ4K695jsE/qpV+KFxmA0s3bvw6L8n1lbtb4AByyV2Ua3AGEOmMjBjYy+OhlaugJAwGWTEo9WWBSccCsdNpSjxVv83hAHsE5txUBsizmtz4kKVagVYknQGlgfoPYjNwYyRGe+nHAaZ/S9AR2vpAWRgbFiEHCR3r6YGMTDfuHuVq7muTPv6CdsSWAykF813f+ixnSYc9H3KZpA5hmYrfWfbgixKVlGV7xMbw6BsPi25bMNRA3aGhGZT0BkAyw+mey0Eyz41sBlABEmCAfKJwCokscedwzMIgcB6XNcudsBWgxyTQZLFQBKz7h5Da/rwVf+9mQwyJ6st+SrBAMZGYHccC7xEsSEMsiOUSoGVII0ExAQWA3TT2Vd7ib5j7zIFgckAIWipQk/z84KTIzlFpViM5xUbwMDKB12FAstFaN8z1cCYbURjgK+TvbpsUejt9fsCh8F+3EIy1/KDxQCVz+zAwN+siYcgxJJVW+vJX1q5wQBbDZIsBqYTA9mrB5eRP1i+4ncFDoM+U6lyuV+tp8ZDCnP2iOMoJ11uAAPzcV0LzG0X8ZdgS6AysK8jC7jEwLw5zOBbc7ZaPv/XEqn9RKV9M/gBts/AflxywwnTRQQ4xFySxcB+aVxnhffFsS3LYTCKckNnBBYmDIHWwGuG7w+slSMJVxFd42XJSSYD+yLczoybQfKvZB1JFPscrxicMIeeAsUW85UPErPkzV1atO+fvGwL0gjn/5BDxD+8wtwHg9+XIRkkq0/+ZjPANQNi0mplNsgjcBlwc6QyLTkwosJIruXlVyzBDOz/QyqAf/jVy8C+BhcByQDmBw4Do3YEHK8Y6w+qpGybgRUZXTviGFy0o14Gr/AZEA4xAoNcvqXlyY/E+AK+AjlVLyBJ2D4DU+3HfVFBGz6KPSJZOjJ/tici+/2BfQ0+AoIBmtP95Efrec0J+xIxiz2ovMxlwO1xmMuoXKaA3eRI5igjKuSSTAZ2c2EmidgMUKZMMLDH12adiWoldt+J2w43OGLT19y7fo/gWMlkkGczsDGGQGAzQJYAGThxwBxvl5xZCEFjr/yGOAjKZnJAmgJyETBlYjEgLMHLwH5XYRDYDMzVDUcc67f2VT7t/GqUuXcavyGOQzDcn6tygF0E/A2DAWkJXgZ2DSo0gzj0LuZSJ+d5i2Y+IBFTs2JF1mSM7TIwwoJ7wwfkDpBiMBjk2QyiqYHBoIotAS3ycELh6KSQMW6FWOFVZGwkGII3Z7jOCAGu7R7KZsZEZ+CyBA+DCLdlMejM56t4iXxX0mFQ+rX6LYbgms3PWOMWprFgBriU6KocICx4rJnOwHr4vL/vHCkoWAzwpaow4ladd178reuooQh9rtn89J1qQrQUaAw4DHqmGIyYLpLKAN4vkmSymsQ/kuNM0byByeAlq5HvCAZ/6zIv5VrlRR9/DdNasDGMeCsH0rimjeE3SmOQ6zINIm+ub38BMtjnaSjsBFLMwG7ju/edQPijYQooYSb1YJTWdwo1HydIEXBodB2U1HfW6kbTGCSTOFOsdiFNwDmjs7dwVDVAewvHO1ooDIiJmS5FKNIKrKEYBClC2ZccTJ44OyKxGFQ93gDKT2pckV3NhJ4otarE1Z/sa/9MrvK1D14Ac6RHKFD6TuG0jq0IRmh05YjCzULMUDk/Ayc1sH/q+rt19IDdSlgEwnnI4O9UBsSm9y5FqMT81hCyMTYDGANclQN0zeMnjCqmn0HSL12/WHvO29cMzWBNj+uL1ghO7geCAVFCJLvQNEUI2xx7KxiYEvoOx5FunlhB3wD7q24EVRqDf5jHcETpNBuSmYeu5B8oMGIV+5XUAyIxljYcaxj1O4TQlseyBjTSOOLbZkFePy2aikBKlbrz2Q96XJ0X6lEDtB+R8jNeC4rcy6+k8yPq6WDOKSzO+ssIoZtj7v09QJ1/aJ0/mNkfQvbBt5mKUkKzBE0RVh0/QzKokBv/S2YtpVJ66Nu+LMq8bVZsSHA26wRckY0zaexvhF9dMgXdwS/YHeAuyG9kANgkGIA5NHm5WNi8S9nILjwCFgQYFqJvK+0WtKOO2unMJjGaS3V7ZcZ7R2gnHuWfTrRxMXB1EoXFQqGwOIlimFcRoq1loflF6A54+9byBaAsacK6vHlTq/+jeET3TNFEhxao7U+c3fV+Ky2UisVipVIplgoF8mQmMLe4nhJAdqB23zODO+q6bxqEh9s7P9B4avRC9S3zxD/LFHwn9nmGm1Id6JC3f+bInvj/3n/74eLs7Ozi8RW37wMyujoYvlt0r+yJvvTdZw4oJ3ywXQTwsdFSIH2+DUWfsHc13Y6+84u7FvF9QhuQjaP9aMop/KE4uu56iMgIKBCkmwvceaBhBD9QvLsNyKE8YmZ6Ap1jqf/kSTX+rHnzNVJAX79nLkJ9h7F48QqTm/3r2z7gFmDFVhVlam1mOpWRZKZIqbbV81sd+NBP/aeX3Ai6vg5cKCAvnmgEAr9TkMSNf/Fmw4aAIM4ratw+yxSdfaeimX7wX/gf82fV+jueBvmLG0D+aLZWCzjmFtz8l/uYmG2c4+lThT7urKcQIqz2OGfacgWyuP0ykWvmXziWFdY/OrUZdFDcypwLQf0EoHiPCI1+dilNJHl6q9082jhQ0HTQ9q3pkyePHUVy7NjJ/dCTTh7fPFEo0HJhpwVXwW9bCCgUGiNATrXNrE1M9XQESM/UxNpMWwod9g0yeDtuvOuQtLK4uHFzMvRZsg0543pHKODzeIEYdK4v+ggt8EE/KtAjIk0adOA7/+zgp1YaRMDAsDPKsMPSCDPwYHi2OARs4r89DnWd7b37AnYKgM3haQVhHQ6+s8/vJgFCWQewiitRzwR3PZp1+jnqJJnJ9C49aQjBqb1XePdIdgsY8rQ9Z1Oa0pSmNKUpTWlKU5rSlKY0pSn/P+X/APbzDrAmsBsQAAAAAElFTkSuQmCC" alt="image">
+    </div>
+  </div>
+  <div class="row " style="margin-top:60px">
+    <div class="col-lg-4 d-flex justify-content-center">
+        <div class="card" style="width: 18rem;">
+            <img src="https://cdn0.iconfinder.com/data/icons/business-and-finance-162/32/finance_check_balance_mobile_phone-512.png" class="card-img-top" alt="balance">
+            <div class="card-body d-flex justify-content-center align-items-center">
+              <h5 class="card-title">Balance enquiry</h5>
+              <p class="card-text"></p>
+              <button (click)="getBalance()" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" class="btn btn-primary">Click to know your balance</button>
+            </div>
+          </div>
+    </div>
+    <div class="col-lg-4 justify-content-center">
+        <div class="card" style="width: 18rem;">
+            <img src="https://www.pngkit.com/png/full/174-1749798_money-transfer-icon-png.png" class="card-img-top" alt="fund transfer">
+            <div class="card-body d-flex justify-content-center align-items-center">
+              <h5 class="card-title">Fund Transfer</h5>
+              <p class="card-text"></p>
+              <button  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Click to transfer fund</button>
+            </div>
+          </div>
+    </div>
+    <div class="col-lg-4 justify-content-center">
+        <div class="card" style="width: 18rem;">
+            <img src="https://cdn-icons-png.flaticon.com/512/401/401176.png" class="card-img-top" alt="transaction">
+            <div class="card-body d-flex justify-content-center align-items-center">
+              <h5 class="card-title">Transactions</h5>
+              <p class="card-text"></p>
+              <a routerLink="/user/transactions" class="btn btn-primary ms-2">click to know Transactions </a>
+            </div>
+          </div>
+    </div>
+  </div>
+<!-- body ends -->
+
+<!-- balance offcanvas -->
+<div *ngIf="showOffcanvas" class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Balance Enquiry</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex justify-content-center align-items-center">
+        <img src="https://cdn0.iconfinder.com/data/icons/business-and-finance-162/32/finance_check_balance_mobile_phone-512.png" alt="balance image" style="width:80px;height: 100px;">
+      <div>
+        <h2>Hi {{user}}</h2>
+        <p style="font-size:25px;">Your current balance :<span style="color: red;font-size: 30px;font-weight: 600;">{{balance}}</span></p>
+    </div>
+    </div>
+  </div>
+
+
+  <!-- fund transfer -->
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Fund Transfer</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="transferForm" >
+          <div class="form-floating mb-3">
+            <input name="creditAcno" formControlName="creditAcno"  type="text" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">Credit Account</label>
+            <div class="mt-2 text-danger" *ngIf="this.transferForm.get('creditAcno')?.errors && this.transferForm.get('creditAcno')?.touched ">
+              Invalid credit A/C number
+            </div>
+          </div>
+          
+          <div class="form-floating mb-3">
+            <input name="creditAmount" formControlName="creditAmount"  type="text" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Credit Amount</label>
+            <div class="mt-2 text-danger" *ngIf="this.transferForm.get('creditAmount')?.errors && this.transferForm.get('creditAmount')?.touched ">
+              Invalid credit Amount
+            </div>
+          </div>
+          
+          <div class="form-floating">
+            <input name="profilePswd" formControlName="profilePswd" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+            <label for="floatingPassword">Profile Password</label>
+            <div class="mt-2 text-danger" *ngIf="this.transferForm.get('profilePswd')?.errors && this.transferForm.get('profilePswd')?.touched ">
+              Invalid profile Password
+            </div>
+          </div>
+          
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" (click)="cancelTransfer()" class="btn btn-secondary" data-bs-dismiss="modal">cancel</button>
+        <button (click)="transfer()" type="button" data-bs-dismiss="modal"  class="btn btn-primary">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdropdelete">
+  Launch static backdrop modal
+</button> -->
+<!--Account deletion Modal -->
+<div class="modal fade" id="staticBackdropdelete" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Delete Account confirmation</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="fw-bolder">Are you sure, do you want to delete this account?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+        <button (click)="deleteMyAcno()" type="button" data-bs-dismiss="modal" class="btn btn-danger">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>

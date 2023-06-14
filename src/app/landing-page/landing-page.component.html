@@ -1,0 +1,26 @@
+<app-navbar></app-navbar>
+<div class="body">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h1 class="title">Welcome to our Bank</h1>
+            <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa facilis doloremque quos placeat quidem voluptate voluptas quae rerum. At in veritatis exercitationem labore repellat sint autem, illo vero incidunt cum!</p>
+        
+  
+              
+        
+            <div class="collapse description" id="collapseExample">
+             
+                Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+    
+            </div>
+  
+            
+          </div>
+      </div>
+      <button  (click)="collapse()" class="btn btn-primary ms-5 mt-1" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"  >read <span *ngIf="isCollapse">more</span>
+      <span *ngIf="!isCollapse"> Less </span></button>
+    </div>
+   
+  </div>
+  

@@ -1,0 +1,56 @@
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <div class="d-flex align-items-center ">
+        <i class="fa-solid fa-building-columns me-2"></i>
+        <a routerLink="/user/dashboard" class="navbar-brand text-primary fw-bolder ">Bank App</a>
+      </div>
+  
+      
+      <form class="d-flex align-items-center" role="search">
+        <a routerLink="signin" class="me-2 fw-bolder">Sig In</a>
+        <a routerLink="register" class="me-2 fw-bolder">Join Now</a>
+      </form>
+    </div>
+  </nav>
+
+  <!-- body -->
+  <main class="container mt-3">
+    <h3 class="text-primary">Mini Statement</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tempore iusto quae nostrum veniam consequatur. Quasi obcaecati laborum error excepturi! Eos officiis accusamus provident repudiandae delectus repellendus deserunt dignissimos id.</p>
+
+    <div class="frame" class="border">
+        <div class=" d-flex justify-content-between p-4 ">
+            <h4 class="text-success">All Transactions</h4>
+           
+            <div class="search-box d-flex align-items-center">
+                <span>Search By:</span>
+                <input type="text" name="searchKey" [(ngModel)]="searchKey" class="form-control" placeholder="Transaction Type">
+            </div>
+            <button (click)="generatePDF()" class="btn btn-success">Export</button>
+        </div>
+        <table class="table border mt-3">
+            <thead >
+              <tr class="text-primary">
+                <th scope="col">No</th>
+                <th scope="col">Transaction Type</th>
+                <th scope="col">From Account</th>
+                <th scope="col">To Account</th>
+                <th scope="col">Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+             
+            
+              <tr *ngFor="let transaction of transactions | filterTransaction : searchKey:'transaction_Type';let i=index" >
+                <th class="fw-bolder" scope="row">{{i+1}}</th>
+                <td class="fw-bolder">{{transaction.transaction_Type}}</td>
+                <td class="fw-bolder">{{transaction.fromAcno}}</td>
+                <td class="fw-bolder">{{transaction.toAcno}}</td>
+                <td class="fw-bolder">{{transaction.amount}}</td>
+              </tr>
+            </tbody>
+          </table>
+
+    </div>
+
+  </main>

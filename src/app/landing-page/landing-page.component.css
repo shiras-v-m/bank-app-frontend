@@ -1,0 +1,16 @@
+.body{
+    width: 100%;
+    height: calc( 100vh - 56px );
+    background-image: url('https://www.iave.org/iavewp/wp-content/uploads/2020/06/BANNER-BACKGROUND.png');
+   background-size: cover;
+}
+.body .title{
+    color: white;
+    padding-top: 50px;
+    font-size: 60px;
+    font-weight: 800;
+}
+.body .description{
+    color: rgb(196, 196, 196);
+    font-size: 20px;
+}
